@@ -1,5 +1,5 @@
 # Post_Winstall
-Powershell script for installing and setting up applications on Windows 10.
+Powershell script for setting up Windows 10 and installing applications.
 
 # Opis: 
 Skripta za podesavanje sistema i instaliranje neophodnih aplikacija
