@@ -15,9 +15,9 @@ da preuzme sve neophodne module i zakrpe.
 # Koriscenje:
 Nakon sto se ispunili sve preduslove, skriptu mozete pokrenuti dvoklikom
 na njeno ime "Post_Winstall.ps1". Skriptu je moguce pokrenuti sa bilo koje
-lokacije (C:\, USB...).
+lokacije (C:\, USB...). 
 Skripta ce izvrsiti sledece akcije na racunaru: 
-Instalirace NuGet paket 
+*Instalirace NuGet paket 
 Obelezice PSGallery repozitorijum kao proveren
 Proverice internet konekciju
 Instalirace modul za Windows Update
