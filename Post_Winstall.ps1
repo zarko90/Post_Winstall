@@ -94,17 +94,6 @@ Import-Module PSWindowsUpdate
 
 #######################################################################################################################
 
-#Podesavamo vremensku zonu na CET+1 i sinhronizujemo vreme
-Set-TimeZone -Id "Central Europe Standard Time"
-W32tm /resync /force
-
-#Podesavamo format na Srski/Latinica i lokaciju na Srbija
-Set-WinHomeLocation -GeoId 0x10f
-Set-WinSystemLocale -SystemLocale sr-Latn-RS
-Set-Culture -CultureInfo sr-Latn-RS
-
-
-#######################################################################################################################
 
 #Pitamo korisnika da li zeli da promeni ime racunara
 $ispravan_odgovor = $false
@@ -172,8 +161,21 @@ While (-not $ispravan_odgovor)
 
 
 #Omogucujemo Remote Desktop i propustamo ga kroz firewall
-Set-ItemProperty ‘HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\‘ -Name “fDenyTSConnections” -Value 0
-Enable-NetFirewallRule -DisplayGroup “Remote Desktop”
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" -Value 0
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+
+#######################################################################################################################
+
+
+#Podesavamo vremensku zonu na CET+1 i sinhronizujemo vreme
+Set-TimeZone -Id "Central Europe Standard Time"
+W32tm /resync /force
+
+#Podesavamo format na Srski/Latinica i lokaciju na Srbija
+Set-WinHomeLocation -GeoId 0x10f
+Set-WinSystemLocale -SystemLocale sr-Latn-RS
+Set-Culture -CultureInfo sr-Latn-RS
 
 
 #######################################################################################################################
